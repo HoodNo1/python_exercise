@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(code --list-extensions --show-versions)",
+      "Bash(code --list-extensions)",
+      "Bash(code --version)",
+      "WebSearch",
+      "Bash(git clone *)",
+      "Read(//tmp/**)",
+      "Bash(uv run *)"
+    ]
+  },
+  "skills": {
+    "new-practice": {
+      "description": "生成新的练习文件模板，遵循 practice_XX_topic.py 命名规范",
+      "prompt": "Create a new Python practice file following the conventions in CLAUDE.md. The filename should follow practice_XX_topic.py. Ask the user for: the two topics to cover, or the next sequence number if continuing from existing files. Read CLAUDE.md for the exact conventions before generating."
+    },
+    "review-spoilers": {
+      "description": "检查练习文件中是否有注释泄露答案或解释",
+      "prompt": "Review the given practice file for comment spoilers — any comments that reveal answers, results, explanations, or behavior outcomes that learners should discover themselves. Read CLAUDE.md for the full rules on exercise comments. Report each issue with line number and suggested fix."
+    },
+    "commit-push": {
+      "description": "将修改生成commit并提交到远端develop分支",
+      "prompt": "Stage all modified and new project files (practice files, CLAUDE.md, settings.local.json), check git status first to determine what to stage, create a descriptive commit message, and push to the remote develop branch. Do not include unrelated files like .vscode/, .continue/, or personal notes."
+    }
+  }
+}
