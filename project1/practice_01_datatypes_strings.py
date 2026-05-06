@@ -188,23 +188,23 @@ _123 = "合法"
 # 3) 从列表 [10, 20, 30] 中拆包到 a, b, c 三个变量
 # ---------------------------------------------------------------------------
 
-x, y, z = ...
+x, y, z = 1, 2, 3
 
 # 交换 x 和 y
-x, y = ...
+x, y = y, x
 
 # 列表拆包
-lst = [10, 20, 30]
-a, b, c = ...
+lst = [10, 20, 30, 40]
+a, b, c, d = lst
 
-# print(f"x={x}, y={y}, z={z}")
-# print(f"交换后: x={x}, y={y}")
-# print(f"拆包: a={a}, b={b}, c={c}")
+print(f"x={x}, y={y}, z={z}")
+print(f"交换后: x={x}, y={y}")
+print(f"拆包: a={a}, b={b}, c={c}")
 
-# assert x == 1 and y == 2 and z == 3
-# assert x == 2 and y == 1  # 交换后
-# assert (a, b, c) == (10, 20, 30)
-# print("练习 1.7 通过！")
+assert x == 2 and y == 1 and z == 3
+assert x == 2 and y == 1  # 交换后
+assert (a, b, c) == (10, 20, 30)
+print("练习 1.7 通过！")
 
 
 # ---------------------------------------------------------------------------
@@ -215,18 +215,18 @@ a, b, c = ...
 # ---------------------------------------------------------------------------
 
 var = 100
-# print(f"var = {var}, type = {type(var)}")
+print(f"var = {var}, type = {type(var)}")
 
 var = "现在是字符串"
-# print(f"var = {var!r}, type = {type(var)}")
+print(f"var = {var}, type = {type(var)}")
 
 var = [1, 2, 3]
-# print(f"var = {var}, type = {type(var)}")
+print(f"var = {var}, type = {type(var)}")
 
 var = False
-# print(f"var = {var}, type = {type(var)}")
+print(f"var = {var}, type = {type(var)}")
 
-# print("练习 1.8 通过！")
+print("练习 1.8 通过！")
 
 
 # ---------------------------------------------------------------------------
@@ -239,26 +239,26 @@ var = False
 #   5) round(3.14159, 3)  —— 保留几位？
 # ---------------------------------------------------------------------------
 
-quotient = ...
-remainder = ...
-power = ...
-abs_pow_sum = ...
-divmod_result = ...
-rounded = ...
+quotient = 7 // 3
+remainder = 7 % 3
+power = 2 ** 10
+abs_pow_sum = abs(-5) + pow(3, 3)
+divmod_result = divmod(17, 5)
+rounded = round(3.14159, 3)
 
-# print(f"7 // 3 = {quotient}, 7 % 3 = {remainder}")
-# print(f"2 ** 10 = {power}")
-# print(f"abs(-5) + pow(3, 3) = {abs_pow_sum}")
-# print(f"divmod(17, 5) = {divmod_result}")
-# print(f"round(3.14159, 3) = {rounded}")
+print(f"7 // 3 = {quotient}, 7 % 3 = {remainder}")
+print(f"2 ** 10 = {power}")
+print(f"abs(-5) + pow(3, 3) = {abs_pow_sum}")
+print(f"divmod(17, 5) = {divmod_result}")
+print(f"round(3.14159, 3) = {rounded}")
 
-# assert quotient == 2
-# assert remainder == 1
-# assert power == 1024
-# assert abs_pow_sum == 32
-# assert divmod_result == (3, 2)
-# assert rounded == 3.142
-# print("练习 1.9 通过！")
+assert quotient == 2
+assert remainder == 1
+assert power == 1024
+assert abs_pow_sum == 32
+assert divmod_result == (3, 2)
+assert rounded == 3.142
+print("练习 1.9 通过！")
 
 
 # ---------------------------------------------------------------------------
@@ -274,18 +274,18 @@ v1 = 123
 v2 = 3 + 4j
 v3 = True
 
-# print(f"type(v1) = {type(v1)}")
-# print(f"type(v2) = {type(v2)}")
-# print(f"type(v3) = {type(v3)}")
-# print(f"isinstance(v1, int) = {isinstance(v1, int)}")
-# print(f"isinstance(v3, int) = {isinstance(v3, int)}")
-# print(f"issubclass(bool, int) = {issubclass(bool, int)}")  # 思考输出
+print(f"type(v1) = {type(v1)}")
+print(f"type(v2) = {type(v2)}")
+print(f"type(v3) = {type(v3)}")
+print(f"isinstance(v1, int) = {isinstance(v1, int)}")
+print(f"isinstance(v3, int) = {isinstance(v3, int)}")
+print(f"issubclass(bool, int) = {issubclass(bool, int)}")  # 思考输出
 
-# assert type(v1) is int
-# assert type(v2) is complex
-# assert isinstance(v1, int) is True
-# assert isinstance(v3, int) is True  # 为什么？
-# print("练习 1.10 通过！")
+assert type(v1) is int
+assert type(v2) is complex
+assert isinstance(v1, int) is True
+assert isinstance(v3, int) is True  # 为什么？
+print("练习 1.10 通过！")
 
 
 # ---------------------------------------------------------------------------
@@ -296,20 +296,20 @@ v3 = True
 # ---------------------------------------------------------------------------
 
 x = 100
-# print(f"初始: x = {x}, id = {id(x)}")
+print(f"初始: x = {x}, id = {id(x)}")
 
 x = x + 1
-# print(f"加 1: x = {x}, id = {id(x)}")
+print(f"加 1: x = {x}, id = {id(x)}")
 
-# assert id(100) != id(101)
+assert id(100) != id(101)
 
 s = "hello"
-# print(f"初始: s = {s!r}, id = {id(s)}")
+print(f"初始: s = {s!r}, id = {id(s)}")
 
 s = s + " world"
-# print(f"拼接后: s = {s!r}, id = {id(s)}")
+print(f"拼接后: s = {s!r}, id = {id(s)}")
 
-# print("练习 1.11 通过！")
+print("练习 1.11 通过！")
 
 
 # ---------------------------------------------------------------------------
@@ -374,9 +374,9 @@ s = "hello"
 # ---------------------------------------------------------------------------
 
 x: int | str = 42
-# print(f"x = {x}, type = {type(x)}")
+print(f"x = {x}, type = {type(x)}")
 x = "hello"
-# print(f"x = {x!r}, type = {type(x)}")
+print(f"x = {x!r}, type = {type(x)}")
 
 # 用 isinstance 检查联合类型
 value = 3.14
@@ -388,13 +388,16 @@ is_int_or_float = ...  # isinstance(value, int | float)
 # 在函数签名中使用（补全参数注解）
 def double(value: int | str) -> int | str:
     """如果 value 是 int 则返回 value*2，如果是 str 则返回 value 重复两次。"""
-    ...
+    if type(value) is int:
+        return value * 2
+    if type(value) is str:
+        return value * 2
 
-# print(double(21))     # → 42
-# print(double("Hi"))   # → "HiHi"
-# assert double(21) == 42
-# assert double("Hi") == "HiHi"
-# print("练习 1.14 通过！")
+print(double(21))     # → 42
+print(double("Hi"))   # → "HiHi"
+assert double(21) == 42
+assert double("Hi") == "HiHi"
+print("练习 1.14 通过！")
 
 
 # ---------------------------------------------------------------------------
